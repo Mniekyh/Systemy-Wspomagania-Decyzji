@@ -1,0 +1,38 @@
+ZAD_1_W_2
+b)
+OBRAZEK:
+https://moodle2.e-wsb.pl/mod/resource/view.php?id=4925131 
+woman(olenna).
+woman(cersei).
+woman(arya).
+woman(daenerys).
+
+hasGoldArmor(jaime).
+hasTree(eddard).
+
+hasCurlyHair(jon).
+hasCurlyHair(cersei).
+hasCurlyHair(daenerys).
+
+hasShortHair(tywin).
+hasShortHair(jaime).
+hasShortHair(arya).
+
+isRaining(jon).
+
+isOld(tywin).
+isOld(olenna).
+
+man(X) :- \+ woman(X).
+
+hasBeard(X) :- \+ woman(X).
+
+hasLongHair(X) :- \+ hasShortHair(X).
+
+isSunny(X) :- \+ isRaining(X).
+
+
+hasStraightHair(X) :- \+ hasCurlyHair(X).
+
+isYoung(X) :- \+ isOld(X).
+

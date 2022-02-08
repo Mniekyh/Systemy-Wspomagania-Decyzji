@@ -1,0 +1,36 @@
+ZAD_1_W_2
+c)
+
+OBRAZEK:
+https://moodle2.e-wsb.pl/mod/resource/view.php?id=4925133
+woman(blackWidow).
+man(america).
+man(nightHawk).
+human(X):- man(X).
+human(X):- woman(X).
+
+isRedHead(blackWidow).
+wearsBlackBelt(blackWidow).
+
+hasHalfFaceHood(america).
+wearsBlue(america).
+hasShield(america).
+hasStar(america).
+hasAOnHood(america).
+
+isSleeveLess(nightHawk).
+isSleeveLess(X) :- looksGood(X).
+
+hasShortHair(nightHawk).
+wearsWaistcoat(nightHawk).
+hasWeaponOnBack(nightHawk).
+
+isPainted(ground).
+madeOfConcrete(ground).
+madeOfConcrete(X) :- \+ human(X).
+
+hasGloves(X) :- human(X).
+
+looksGood(X) :- \+ wearsBlue(X).
+hasLongHair(X) :- \+ hasShortHair(X).
+

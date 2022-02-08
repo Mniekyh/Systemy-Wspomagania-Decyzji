@@ -1,0 +1,45 @@
+a)
+Obrazek:
+https://moodle2.e-wsb.pl/mod/resource/view.php?id=4925130
+/*Geder*/
+woman(yellow).
+woman(white).
+woman(checked).
+
+/*feelings*/
+happy(yellow).
+mature(yellow).
+
+angry(white).
+young(white).
+
+curious(checked).
+relaxed(checked).
+
+/*place*/
+vacation(yellow).
+vacation(white).
+vacation(checked).
+
+/*activity*/
+walking(yellow).
+walking(white).
+walking(checked).
+
+/*glasses*/
+wearsSunGlasses(yellow).
+wearsSunGlasses(white).
+wearsSunGlasses(checked).
+
+/*building*/
+isDevastated(building).
+hasGarage(building).
+
+/*Day*/
+sunny(day).
+beautiful(day).
+
+/*activities*/
+sightseeing(X,Y,Z) :- happy(X), curious(Y), angry(Z).
+jealous(X,Y) :- young(X), mature(Y).
+relaxed(X,Y) :- sunny(X), vacation(Y).

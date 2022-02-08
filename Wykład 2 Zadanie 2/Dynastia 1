@@ -1,0 +1,49 @@
+
+ZAD_2_W_2
+https://moodle2.e-wsb.pl/mod/resource/view.php?id=4925138 
+/*StartOfDynasty*/
+headOfDynasty(kazimierz2Sprawiedliwy).
+/*Child of Head of Dynasty*/
+son(leszekBialy,kazimierz2Sprawiedliwy).
+son(konrad1Mazowiecki,kazimierz2Sprawiedliwy).
+
+/*Sons of Konrad I Mazowiecki*/
+son(boleslaw,konrad1Mazowiecki).
+son(kazimierz1,konrad1Mazowiecki).
+son(siemowit,konrad1Mazowiecki).
+
+
+
+/*Sons of Kazimierz 1*/
+son(leszekCzarny,kazimierz1).
+son(siemomysl,kazimierz1).
+son(wladyslaw1Lokietek,kazimierz1).
+son(kazimierz2,kazimierz1).
+son(siemowitFromKazimierz1,kazimierz1).
+
+
+/*Sons of Siemomysl*/
+son(leszek, siemomysl).
+son(przemysl,siemomysl).
+son(kazimierz3,siemomysl).
+
+/*Son of Wladyslaw I Lokietek*/
+son(kazimierz3Wielki,wladyslaw1Lokietek).
+
+
+/*Sons of Siemowit who is son of Kazimierz*/
+son(wladyslawGarbaty,siemowitFromKazimierz1).
+son(boleslaw,siemowitFromKazimierz1).
+
+
+/* Children without sons*/
+sonLess(leszekBialy,kazimierz2Sprawiedliwy).
+sonLess(boleslaw,konrad1Mazowiecki).
+sonLess(leszekCzarny,kazimierz1).
+sonLess(kazimierz2,kazimierz1).
+
+/*Connected with other dynasty*/
+betrayer(siemowit).
+
+brothers(X,Y):-son(X,Z),son(Y,Z).
+whoFatherIs(X,Y):-son(X,Y).
